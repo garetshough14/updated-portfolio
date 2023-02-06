@@ -41,6 +41,12 @@ const Modal = ({ darkMode, showModal, setShowModal }) => {
               x
             </motion.button>
           </div>
+          <iframe
+            title="pdf-file"
+            src={require("../resume/Hough_Resume_edited.pdf")}
+            width="100%"
+            height="100%"
+          />
         </motion.div>
       )}
     </AnimatePresence>

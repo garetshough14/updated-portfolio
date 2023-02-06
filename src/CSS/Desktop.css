@@ -54,12 +54,14 @@
     margin: 20px;
 }
 .iconText{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    font-size: 18px;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .footerContainer{
