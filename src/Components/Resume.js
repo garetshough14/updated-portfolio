@@ -16,7 +16,7 @@ const modalAnimation = {
   },
 };
 
-const Modal = ({ darkMode, showModal, setShowModal }) => {
+const Resume = ({ darkMode, showModal, setShowModal, playExitSound }) => {
   return (
     <AnimatePresence exitBeforeEnter>
       {showModal && (
@@ -34,6 +34,7 @@ const Modal = ({ darkMode, showModal, setShowModal }) => {
             <motion.button
               onClick={() => {
                 setShowModal(false);
+                playExitSound()
               }}
               whileTap={{ scale: 1.1 }}
               className={darkMode ? "darkModeModalExit" : "modalExit"}
@@ -53,4 +54,4 @@ const Modal = ({ darkMode, showModal, setShowModal }) => {
   );
 };
 
-export default Modal;
+export default Resume;

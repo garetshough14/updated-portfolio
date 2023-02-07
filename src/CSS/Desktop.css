@@ -1,4 +1,5 @@
-.backgroundImage{
+/* Background for main image */
+.backgroundImage{ 
     background-image: url("../images/background1.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -7,6 +8,7 @@
     height: 100vh;
     width: 100vw;
 }
+/* image for darkmode */
 .darkModeImage{
     background-image: url("../images/background3.jpg");
     background-repeat: no-repeat;
@@ -16,6 +18,8 @@
     height: 100vh;
     width: 100vw;
 }
+
+/* Dark Mode Text just for desktop NOT inside modals */
 .darkModeIconText{
     color: white;
     margin-top: 15px;
@@ -24,6 +28,8 @@
     justify-content: center;
     flex-direction: row;
 }
+
+/* All Icon images including Desktop and modal */
 .Icons{
     display: flex;
     flex-direction: row;
@@ -33,16 +39,19 @@
     width: 70px;
 }
 
-.projectIcons{
+/* Layout for Icons in Projects Modal */
+.modalIconLayout{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
     display: flex;
     flex-direction: row;
     align-self: space-between;
-    /* justify-content: flex-start; */
-    /* align-items: flex-start; */
     margin: 10px;
     height: 70px;
     width: 70px;
 }
+/* Layout For Icons on Desktop */
 .iconLayout{
     position: absolute;
     top: 0;
@@ -50,9 +59,16 @@
     display: flex;
     flex-direction: column;
 }
+
+/* Class is used for Icons in Desktop/Settings/socials */
 .seperateContainers{
     margin: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
 }
+
+/* this is used for standard text on desktop */
 .iconText{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 15px;
@@ -64,6 +80,7 @@
     font-weight: 300;
 }
 
+/* Lightmode version of footer */
 .footerContainer{
     position: fixed;
     bottom: 0;
@@ -73,6 +90,7 @@
     height: 40px;
     width: 100%;
 }
+/* Darkmode version of footer */
 .darkModeFooterContainer{
     position: fixed;
     bottom: 0;
@@ -82,6 +100,8 @@
     height: 40px;
     width: 100%;
 }
+
+/* Lightmode version of start button */
 .startButton{
     display: flex;
     align-items: center;
@@ -93,6 +113,7 @@
     border-bottom-right-radius: 20px;
     border-top-right-radius: 8px;
 }
+/* darkmode version of start button */
 .darkModeStartButton{
     display: flex;
     align-items: center;

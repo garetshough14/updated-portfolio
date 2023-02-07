@@ -45,22 +45,22 @@ const Projects = ({ darkMode, showProjects, setShowProjects }) => {
               x
             </motion.button>
           </div>
-          <motion.div className="projectIcons">
-            <div style={{display: "flex", flexDirection: "column", textAlign: 'center', width: "100%", margin: "10px" }}>
+          <motion.div className="modalIconLayout">
+            <div className='modalIconContainer'> 
             <a target="_blank" rel="noopener noreferrer" href="https://luceroweb.github.io/haunted-house-game/#/">
-            <img className="projectIcons" src={Bat} alt="Logo" />
+            <img className="Icons" src={Bat} alt="Logo" />
             </a>
             <div>Haunted House</div>
             </div>
-            <div style={{display: "flex", flexDirection: "column", textAlign: 'center', width: "100%", margin: "10px" }}>
+            <div className='modalIconContainer'>
             <a target="_blank" rel="noopener noreferrer" href="https://luceroweb.github.io/trivia-and-chill/">
-            <img className="projectIcons" src={Film} alt="Logo" />
+            <img className="Icons" src={Film} alt="Logo" />
             </a>
             <div>Trivia and Chill</div>
             </div>
-            <div style={{display: "flex", flexDirection: "column", textAlign: 'center', width: "100%", margin: "10px" }}>
+            <div className='modalIconContainer'>
             <a target="_blank" rel="noopener noreferrer" href="https://www.w3schools.com/">
-            <img className="projectIcons" src={ProjectsImg} alt="Logo" />
+            <img className="Icons" src={ProjectsImg} alt="Logo" />
             </a>
             <div>Karots Saving</div>
             </div>

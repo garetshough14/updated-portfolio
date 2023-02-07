@@ -1,8 +1,10 @@
+/* Main screen container */
 .mainContainer{
     height: 100%;
     width: 100%;
 }
 
+/* Lightmode version of modal Container */
 .modalContainer{
     height: 500px;
     width: 500px;
@@ -16,6 +18,7 @@
 
 }
 
+/* Darkmode version of modal Container */
 .darkModeModalContainer{
     height: 500px;
     width: 500px;
@@ -29,7 +32,16 @@
 
 }
 
+/* Styling for modal Icon container */
+.modalIconContainer{
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 10px;
+}
 
+/* lightmode version of top bar for modal */
 .topBar{
     height: 30px;
     width: 100%;
@@ -43,6 +55,7 @@
     align-items: flex-end;
 }
 
+/* darkmode version of top bar for modal */
 .darkModeTopBar{
     height: 30px;
     width: 100%;
@@ -57,6 +70,7 @@
     align-items: flex-end;
 }
 
+/* Lightmode version for modal exit button */
 .modalExit{
     font-size: 20px;
     background-color: #D9462E;
@@ -68,6 +82,7 @@
 
 }
 
+/* Darkmode version for modal exit button */
 .darkModeModalExit{
     font-size: 20px;
     background-color: #CC5F1C;
@@ -79,12 +94,14 @@
 
 }
 
+/* light mode text for modal title */
 .modalTitle{
     font-size: 20px;
     margin-left: 10px;
     color: #fff;
 }
 
+/* dark mode text for modal title */
 .darkModeModalTitle{
     font-size: 20px;
     margin-left: 10px;

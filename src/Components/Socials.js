@@ -20,7 +20,7 @@ const modalAnimation = {
   },
 };
 
-const ModalTwo = ({ setDarkMode, setShowSocials, showSocials, darkMode }) => {
+const Socials = ({ setDarkMode, setShowSocials, showSocials, darkMode }) => {
   return (
     <AnimatePresence exitBeforeEnter>
       {showSocials && (
@@ -43,8 +43,9 @@ const ModalTwo = ({ setDarkMode, setShowSocials, showSocials, darkMode }) => {
               x
             </motion.button>
           </div>
+          <div className="modalIconLayout">
           <motion.div 
-            className="seperateContainers"
+            className='modalIconContainer'
             // whileHover={{scale: 1.1}}
             onClick={() => {setDarkMode(true)}}
         >
@@ -55,7 +56,7 @@ const ModalTwo = ({ setDarkMode, setShowSocials, showSocials, darkMode }) => {
         </motion.div>
 
         <motion.div 
-            className="seperateContainers"
+            className='modalIconContainer'
             // whileHover={{scale: 1.03}}
             onClick={() => {setDarkMode(false)}}
         >
@@ -64,6 +65,7 @@ const ModalTwo = ({ setDarkMode, setShowSocials, showSocials, darkMode }) => {
         </a>
         <div>LinkedIn</div>
         </motion.div>
+        </div>
 
 
         </motion.div>
@@ -72,4 +74,4 @@ const ModalTwo = ({ setDarkMode, setShowSocials, showSocials, darkMode }) => {
   );
 };
 
-export default ModalTwo;
+export default Socials;

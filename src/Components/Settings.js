@@ -9,7 +9,7 @@ import "../CSS/Modal.css";
 
 const modalAnimation = {
   hidden: {
-    x: "15vh",
+    x: "15vw",
     // y: "60vh",
     opacity: 0,
   },
@@ -21,7 +21,7 @@ const modalAnimation = {
   },
 };
 
-const ModalTwo = ({ showSettings, setShowSettings, setDarkMode, darkMode }) => {
+const Settings = ({ showSettings, setShowSettings, setDarkMode, darkMode }) => {
   return (
     <AnimatePresence exitBeforeEnter>
       {showSettings && (
@@ -33,7 +33,7 @@ const ModalTwo = ({ showSettings, setShowSettings, setDarkMode, darkMode }) => {
           className={darkMode ? "darkModeModalContainer" : "modalContainer"}
         >
           <div className={darkMode ? "darkModeTopBar" : "topBar"}>
-            <div className={darkMode ? "darkModeModalTitle" : "modalTitle"}>Setings</div>
+            <div className={darkMode ? "darkModeModalTitle" : "modalTitle"}>Settings</div>
             <motion.button
               onClick={() => {
                 setShowSettings(false);
@@ -70,4 +70,4 @@ const ModalTwo = ({ showSettings, setShowSettings, setDarkMode, darkMode }) => {
   );
 };
 
-export default ModalTwo;
+export default Settings;
