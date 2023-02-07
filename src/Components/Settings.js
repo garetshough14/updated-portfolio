@@ -4,6 +4,8 @@ import Dark from "../images/dark.png";
 import Star from "../images/star.png";
 import "../CSS/Desktop.css";
 import "../CSS/Modal.css";
+import ExitSound from "./ExitSound";
+import url from '../sounds/close-click.mp3';
 
 
 
@@ -41,7 +43,7 @@ const Settings = ({ showSettings, setShowSettings, setDarkMode, darkMode }) => {
               whileTap={{ scale: 1.1 }}
               className={darkMode ? "darkModeModalExit" : "modalExit"}
             >
-              x
+              <ExitSound url={url}/>
             </motion.button>
           </div>
           <motion.div 

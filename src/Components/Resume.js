@@ -1,11 +1,13 @@
 import React from "react";
 import "../CSS/Modal.css";
 import { motion, AnimatePresence } from "framer-motion";
+import ExitSound from "./ExitSound";
+import url from '../sounds/close-click.mp3';
+
 
 const modalAnimation = {
   hidden: {
     x: "15vh",
-    // y: "60vh",
     opacity: 0,
   },
   visible: {
@@ -16,10 +18,10 @@ const modalAnimation = {
   },
 };
 
-const Resume = ({ darkMode, showModal, setShowModal, playExitSound }) => {
+const Resume = ({ darkMode, showResume, setshowResume}) => {
   return (
     <AnimatePresence exitBeforeEnter>
-      {showModal && (
+      {showResume && (
         <motion.div
           variants={modalAnimation}
           initial="hidden"
@@ -33,21 +35,22 @@ const Resume = ({ darkMode, showModal, setShowModal, playExitSound }) => {
             </div>
             <motion.button
               onClick={() => {
-                setShowModal(false);
-                playExitSound()
+                setshowResume(false);
               }}
               whileTap={{ scale: 1.1 }}
               className={darkMode ? "darkModeModalExit" : "modalExit"}
             >
-              x
+              <ExitSound url={url}/>
             </motion.button>
           </div>
+          <div style={{display: 'flex', justifyContent: 'center', height: '100%', width: '100%'}}>
           <iframe
             title="pdf-file"
             src={require("../resume/Hough_Resume_edited.pdf")}
-            width="100%"
-            height="100%"
+            width="90%"
+            height="90%"
           />
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

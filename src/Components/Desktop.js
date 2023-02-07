@@ -14,7 +14,7 @@ import Trash from './Trash'
 import sound from '../sounds/normal-click.mp3'
 
 const Desktop = () => {
-  const [showModal, setShowModal] = useState(false)
+  const [showResume, setshowResume] = useState(false)
   const [showSettings, setShowSettings] = useState(false)
   const [showProjects, setShowProjects] = useState(false)
   const [showSocials, setShowSocials] = useState(false)
@@ -37,7 +37,7 @@ const Desktop = () => {
     <Trash showTrash={showTrash} setShowTrash={setShowTrash} darkMode={darkMode}/>
     <audio ref={audioRef} src={sound} />
 
-    <Resume showModal={showModal} setShowModal={setShowModal} darkMode={darkMode}/>
+    <Resume showResume={showResume} setshowResume={setshowResume} darkMode={darkMode}/>
       <div className="iconLayout">
 
         <motion.div 
@@ -67,7 +67,7 @@ const Desktop = () => {
             whileHover={{scale: 1.1}}
         >
           <img onClick={() =>{
-            setShowModal(true)
+            setshowResume(true)
             playOpenSound()
             }} className="Icons" src={ResumeImg} alt="Logo" />
           <div className={darkMode ? "darkModeIconText" : "iconText"}>Resume</div>
@@ -97,7 +97,7 @@ const Desktop = () => {
         
       </div>
       <div className={darkMode ? "darkModeFooterContainer" : "footerContainer"}>
-        <div className={darkMode ? "darkModeStartButton" : "startButton"}>Start</div>
+        <button className={darkMode ? "darkModeStartButton startButtonStyling" : "startButton startButtonStyling"}>Start</button>
     </div>
     </div>
   );

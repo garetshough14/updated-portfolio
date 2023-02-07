@@ -5,6 +5,8 @@ import ProjectsImg from "../images/projects.png";
 import Bat from "../images/bat.png";
 import Film from "../images/film.png";
 import "../CSS/Desktop.css";
+import ExitSound from "./ExitSound";
+import url from '../sounds/close-click.mp3';
 
 const modalAnimation = {
   hidden: {
@@ -42,7 +44,7 @@ const Projects = ({ darkMode, showProjects, setShowProjects }) => {
               whileTap={{ scale: 1.1 }}
               className={darkMode ? "darkModeModalExit" : "modalExit"}
             >
-              x
+              <ExitSound url={url}/>
             </motion.button>
           </div>
           <motion.div className="modalIconLayout">

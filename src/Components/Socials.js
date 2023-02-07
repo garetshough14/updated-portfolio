@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import LinkedIn from '../images/Linkedin.png';
 import Github from '../images/Github.png'
 import "../CSS/Desktop.css";
+import ExitSound from "./ExitSound";
+import url from '../sounds/close-click.mp3';
 
 
 
@@ -40,7 +42,7 @@ const Socials = ({ setDarkMode, setShowSocials, showSocials, darkMode }) => {
               whileTap={{ scale: 1.1 }}
               className={darkMode ? "darkModeModalExit" : "modalExit"}
             >
-              x
+              <ExitSound url={url}/>
             </motion.button>
           </div>
           <div className="modalIconLayout">

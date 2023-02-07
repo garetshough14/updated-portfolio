@@ -1,22 +1,36 @@
-import React, {useRef} from "react";
-import exitaudio from '../sounds/close-click.mp3'
-import Resume from "./Resume";
+import React, { useState, useEffect } from "react";
 
-const ExitSound = () => {
+const useAudio = url => {
+  const [audio] = useState(new Audio(url));
+  const [playing, setPlaying] = useState(false);
 
-    const exitAudioRef = useRef(null);
-  
-    const playExitSound = () => {
-      exitAudioRef.current.currentTime = 0
-      exitAudioRef.current.play()
+  const toggle = () => {
+    if (playing) {
+      audio.pause();
+    } else {
+      audio.play();
     }
-    
-    return (
-      <div>
-        <Resume playExitSound={playExitSound} />
-        <audio ref={exitAudioRef} src={exitaudio}/>
-      </div>
-    );
+    setPlaying(!playing);
   };
-  
-  export default ExitSound;
+
+  useEffect(() => {
+    audio.addEventListener('ended', () => setPlaying(false));
+    return () => {
+      audio.removeEventListener('ended', () => setPlaying(false));
+    };
+  }, [audio]);
+
+  return [playing, toggle];
+};
+
+const ExitSound = ({ url }) => {
+  const [playing, toggle] = useAudio(url);
+
+  return (
+    <div>
+      <div onClick={toggle}>x</div>
+    </div>
+  );
+};
+
+export default ExitSound;

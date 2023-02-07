@@ -101,6 +101,11 @@
     width: 100%;
 }
 
+.startButtonStyling{
+    color: white;
+    border: none;
+}
+
 /* Lightmode version of start button */
 .startButton{
     display: flex;

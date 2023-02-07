@@ -1,6 +1,8 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../CSS/Desktop.css";
+import ExitSound from "./ExitSound";
+import url from '../sounds/close-click.mp3';
 
 
 
@@ -39,7 +41,7 @@ const Trash = ({setShowTrash, showTrash, darkMode }) => {
               whileTap={{ scale: 1.1 }}
               className={darkMode ? "darkModeModalExit" : "modalExit"}
             >
-              x
+              <ExitSound url={url}/>
             </motion.button>
           </div>
 
