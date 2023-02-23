@@ -20,6 +20,7 @@ const Desktop = () => {
   const [showSocials, setShowSocials] = useState(false)
   const [darkMode,setDarkMode] = useState(false)
   const [showTrash,setShowTrash] = useState(false)
+  const [fadeIn, setFadeIn] = useState(false)
   const audioRef = useRef(null)
 
   const playOpenSound = () => {
@@ -97,7 +98,22 @@ const Desktop = () => {
         
       </div>
       <div className={darkMode ? "darkModeFooterContainer" : "footerContainer"}>
-        <button className={darkMode ? "darkModeStartButton startButtonStyling" : "startButton startButtonStyling"}>Start</button>
+      {fadeIn && (
+        <div className={`dropdown-menu ${fadeIn ? "show" : ""}`}>
+          <div className="dropdownTopBar">Administrator</div>
+          <div className="columnContainer">
+          <div className="selectionColumn1">
+            <div className="columnItem"></div>
+            <div className="columnItem"></div>
+            <div className="columnItem"></div>
+          </div>
+          <div className="selectionColumn2">
+            
+          </div>
+          </div>
+        </div>
+        )}
+        <button onClick={() => setFadeIn(!fadeIn)} className={darkMode ? "darkModeStartButton startButtonStyling" : "startButton startButtonStyling"}>Start</button>
     </div>
     </div>
   );
