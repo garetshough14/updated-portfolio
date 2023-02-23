@@ -62,7 +62,7 @@ const Socials = ({ setDarkMode, setShowSocials, showSocials, darkMode }) => {
             // whileHover={{scale: 1.03}}
             onClick={() => {setDarkMode(false)}}
         >
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/garet-hough-42bb8222b/">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/garet-hough/">
         <img className="Icons" src={LinkedIn} alt="Logo" />
         </a>
         <div>LinkedIn</div>
