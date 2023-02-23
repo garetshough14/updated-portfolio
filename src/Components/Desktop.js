@@ -98,7 +98,7 @@ const Desktop = () => {
         
       </div>
       <div className={darkMode ? "darkModeFooterContainer" : "footerContainer"}>
-      {fadeIn && (
+      {/* {fadeIn && (
         <div className={`dropdown-menu ${fadeIn ? "show" : ""}`}>
           <div className="dropdownTopBar">Administrator</div>
           <div className="columnContainer">
@@ -112,7 +112,7 @@ const Desktop = () => {
           </div>
           </div>
         </div>
-        )}
+        )} */}
         <button onClick={() => setFadeIn(!fadeIn)} className={darkMode ? "darkModeStartButton startButtonStyling" : "startButton startButtonStyling"}>Start</button>
     </div>
     </div>

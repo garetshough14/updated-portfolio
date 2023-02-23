@@ -61,7 +61,7 @@ const Projects = ({ darkMode, showProjects, setShowProjects }) => {
             <div>Trivia and Chill</div>
             </div>
             <div className='modalIconContainer'>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.w3schools.com/">
+            <a target="_blank" rel="noopener noreferrer" href="https://karot-saving-smart.netlify.app/login">
             <img className="Icons" src={ProjectsImg} alt="Logo" />
             </a>
             <div>Karots Saving</div>
